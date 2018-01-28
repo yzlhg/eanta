@@ -1,0 +1,1 @@
+var i18n_FrontNews_list01_news_page_haveNoRight="鎮ㄦ病鏈夋祻瑙堟鏉′俊鎭殑鏉冮檺锛�";

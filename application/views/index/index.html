@@ -1,0 +1,1321 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if IE 8]>
+			<html class="ie8">
+			<![endif]-->
+	<!--[if IE 9]>
+				<html class="ie8">
+				<![endif]-->
+	<meta charset="utf-8">
+	<title>
+		<?php echo $head['FName'] ?>
+	</title>
+	<meta name="keywords" content="<?php echo $head['FKeywords'] ?>" />
+	<meta name="description" content="<?php echo $head['FNote'] ?>" />
+	<meta name="author" content="<?php echo $head['FAuthor'] ?>" />
+	<link href="/styles/lib.min.css" rel="stylesheet" type="text/css" />
+	<link href="/styles/page_index.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/publicScripts/common/jquery.js"></script>
+	<script type="text/javascript" src="/publicScripts/lib.min.js"></script>
+	<script src="/publicScripts/components/FrontPublic_slideShow01.min.js"></script>
+	<script src="/scripts/i18n/FrontNews_list01.js"></script>
+	<link type="text/css" href="/styles/common.css" rel="stylesheet">
+	<link type="text/css" href="/styles/keyframes.css" rel="stylesheet">
+	<link type="text/css" href="/styles/normalize.css" rel="stylesheet">
+	<link type="text/css" href="/styles/owl.carousel.css" rel="stylesheet">
+	<link type="text/css" href="/styles/owl.theme.default.css" rel="stylesheet">
+	<link type="text/css" href="/styles/superslides.css" rel="stylesheet">
+	<link type="text/css" href="/styles/jquery.fancybox.css" rel="stylesheet">
+	<link type="text/css" href="/styles/jquery.mCustomScrollbar.css" rel="stylesheet">
+	<script src="/styles/jquery-1.11.3.min.js">
+	</script>
+	<script src="/styles/jquery.superslides.js">
+	</script>
+	<script src="/styles/jquery.easing.1.3.js">
+	</script>
+	<script src="/styles/jquery.animate-enhanced.min.js">
+	</script>
+	<script src="/styles/application.js">
+	</script>
+	<script src="/styles/hammer.min.js">
+	</script>
+
+	<script src="/styles/mousewheel.min.js">
+	</script>
+	<script src="/styles/owl.carousel.min.js">
+	</script>
+	<script src="/styles/headroom.min.js">
+	</script>
+	<script src="/styles/jQuery.headroom.js">
+	</script>
+	<script src="/styles/jquery.fancybox.js">
+	</script>
+	<script src="/styles/prefixfree.min.js">
+	</script>
+	<script src="/styles/jquery.stellar.js">
+	</script>
+	<script src="/styles/velocity.min.js">
+	</script>
+	<script src="/styles/jquery.requestAnimationFrame.js">
+	</script>
+	<script src="/styles/jquery.simplr.smoothscroll.js">
+	</script>
+	<script src="/styles/modernizr.js">
+	</script>
+
+
+</head>
+
+<body id="index" class="iframe_effect">
+	<div class="loading_s">
+		<div class="loading_s_up">
+		</div>
+		<div class="loading_s_logo">
+			<img src="/images/LOGO_NEW.svg" alt="">
+		</div>
+		<div class="loading_s_in">
+			<div class="load inl">
+			</div>
+			<div class="load2 inl">
+			</div>
+			<div class="load3 inl">
+			</div>
+		</div>
+	</div>
+
+	<div class="am_tmenu_c_fix">
+		<div class="am_tmenu_c_fix_c">
+			<ul>
+				<?php 
+				foreach($main_nav as $value){
+					switch($value['FName']){
+						case '搬家百科': echo "<li><a href='javascript:void(0)' class='news_botton'>".$value['FName']."</a></li>";
+							break;
+						case '服务模块': echo "<li><a href='/index/Index/products' class='iframe_box'>".$value['FName']."</a></li>";
+							break;
+						default : echo "<li><a href='/index/Index/nav/id/".$value['FID']."' class='iframe_box'>".$value['FName']."</a></li>";
+							break;
+					}
+				}; 
+			?>
+			</ul>
+		</div>
+		<div class="am_tmenu_c headroom iframe_effect">
+			<div class="top_menu">
+				<div class="mini_btn">
+					<p>
+					</p>
+					<p>
+					</p>
+					<p>
+					</p>
+				</div>
+				<ul>
+					<?php 
+						foreach($main_nav as $value){
+							switch($value['FName']){
+								case '搬家百科': echo "<li><a href='javascript:void(0)' class='news_botton'>".$value['FName']."</a></li>";
+									break;
+								case '服务模块': echo "<li><a href='/index/Index/products' class='iframe_box'>".$value['FName']."</a></li>";
+									break;
+								default : echo "<li><a href='/index/Index/nav/id/".$value['FID']."' class='iframe_box'>".$value['FName']."</a></li>";
+									break;
+							}
+						}; 
+					?>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fix_banner resize951">
+		<div class="fuscn_slider move_transf " data-depth="0.20">
+			<div class="slides-container">
+				<!--<li><img src="../images/banner_pic1.jpg"alt="1"></li>-->
+			</div>
+		</div>
+	</div>
+	<div class="am_main iframe_effect" id="am_main">
+		<div class="am_content con1 resize95 ">
+			<div class="am_con1_cen load_pre move_transf ">
+				<div class="t_text_cc1">
+				</div>
+				<div class="t_logo">
+					<div class="t_logo_rotate">
+						<div class="t_logo_rotate1">
+						</div>
+						<div class="t_logo_rotate2">
+						</div>
+					</div>
+					<div class="t_logo_rotate_a">
+						<div class="t_logo_rotate1">
+						</div>
+						<div class="t_logo_rotate2">
+						</div>
+					</div>
+					<div class="t_logo_rotate_b">
+						<div class="t_logo_rotate1">
+						</div>
+						<div class="t_logo_rotate2">
+						</div>
+					</div>
+					<div class="t_logo_in fangk">
+						<li>
+						</li>
+						<li>
+						</li>
+						<li>
+						</li>
+						<li>
+						</li>
+					</div>
+					<div class="t_logo_img">
+						<img src="/images/LOGO_NEW.svg" alt="">
+					</div>
+				</div>
+				<div class="clearb">
+				</div>
+				<div class="t_text_c">
+					<div class="t_text_cr">
+						<p>
+							精工智运
+						</p>
+						<p>
+							Elaboration
+						</p>
+					</div>
+					<div class="t_text_cl">
+						<p>
+							悦享品质
+						</p>
+						<p>
+							Leshare quality
+						</p>
+					</div>
+				</div>
+				<div class="clearb">
+				</div>
+				<div class="t_share_c">
+					<a href="#" target="_blank">
+						<img src="/images/weibo_icon.svg" alt="">
+					</a>
+					<a href="#" target="_blank">
+						<img src="/images/tianmao_icon.svg" alt="">
+					</a>
+					<a href="#" target="_blank">
+						<img src="/images/iconfont-alibaba.svg" alt="">
+					</a>
+					<a href="#">
+						<img src="/images/weixin_icon.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<div xmlns="" class="columnSpace" id="elem-FrontPublic_slideShow01-1444137204393" name="公用幻灯" style="display:none;">
+				<div id="FrontPublic_slideShow01-1444137204393" class="FrontPublic_slideShow01-d7_c1">
+					<!--Banner开放组件开始-->
+					<div class="slideBox_wrap">
+						<div class="slideBox_row">
+							<div class="slideBox">
+								<div class="bd">
+									<ul>
+										<?php
+											foreach($carousel as $car){
+												echo "<li>
+														<a href='javascript:void(0)' class='f_l'>
+															<img src='/upload/carousel/".$car."' />
+														</a>
+													  </li>";
+											}
+										?>
+									</ul>
+								</div>
+								<div class="hd">
+									<ul>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+									</ul>
+								</div>
+								<a class="prev" href="javascript:void(0)"></a>
+								<a class="next" href="javascript:void(0)"></a>
+							</div>
+						</div>
+					</div>
+					<!--Banner开放组件结束-->
+					<script src="/publicScripts/common/banner_jquery.js" type="text/javascript"></script>
+					<!--<script src="/publicScripts/common/banner_over.js" type="text/javascript"></script>-->
+					<script type="text/javascript">
+						$(document).ready(function () {
+							jQuery(".slideBox").slide({
+								mainCell: ".bd ul",
+								autoPlay: true,
+								delayTime: 1000,
+								effect: "fold",
+								interTime: "5" * 1000
+							});
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="am_content con2 pre_an" data-stellar-background-ratio="0.5">
+			<div class="am_c2_c  pos_fl">
+				<div class="am_c2_1 con c2_1">
+					<div class="am_c2_1_img">
+						<div class="columnSpace" id="elem-FrontPublic_slideShow01-1444442225222" name="公用幻灯">
+							<script language="javascript">
+								//<![CDATA[
+								FrontPublic_slideShow01['FrontPublic_slideShow01-1444442225222_init'] = function () {
+									FrontPublic_slideShow01['FrontPublic_slideShow01-1444442225222_init'] = new FrontPublic_slideShow01();
+									FrontPublic_slideShow01['FrontPublic_slideShow01-1444442225222_init'].d5_slide("960", "");
+								}
+								$(FrontPublic_slideShow01['FrontPublic_slideShow01-1444442225222_init']);
+								// ]]>
+							</script>
+							<script type="text/javascript" src="/publicScripts/common/superslide.2.1.js"></script>
+							<div id="FrontPublic_slideShow01-1444442225222" class="FrontPublic_slideShow01-d6_c1">
+								<div class="fullSlide">
+									<div class="bd">
+										<ul>
+											<li>
+												<a href="javascript:void(0)" class="f_pic">
+													<img src="/upload/fullSlide/1.jpg" />
+												</a>
+												<a href="javascript:void(0)" class="f_title">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)" class="f_pic">
+													<img src="/upload/fullSlide/2.jpg" />
+												</a>
+												<a href="javascript:void(0)" class="f_title">
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="hd">
+										<ul></ul>
+									</div>
+									<span class="prev"></span>
+									<span class="next"></span>
+								</div>
+								<script type="text/javascript">
+									$(".fullSlide").hover(function () {
+											$(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+										},
+										function () {
+											$(this).find(".prev,.next").fadeOut()
+										});
+									$(".fullSlide").slide({
+										titCell: ".hd ul",
+										mainCell: ".bd ul",
+										effect: "fold",
+										autoPlay: true,
+										autoPage: true,
+										trigger: "click",
+										interTime: "5" * 1000,
+										startFun: function (i) {
+											var curLi = jQuery(".fullSlide .bd li").eq(i);
+											if (!!curLi.attr("_src")) {
+												curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+											}
+										}
+									});
+								</script>
+							</div>
+						</div>
+					</div>
+					<div class="am_c2_1_outt">
+					</div>
+				</div>
+				<div class="am_c2_2 con c2_2">
+					<div class="am_c2_2_c pos_fb">
+						<div class="am_c2_c_tt">
+							<img src="/images/brand_title.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="am_c2_3 con fangk">
+					<li>
+					</li>
+					<li>
+					</li>
+					<li>
+					</li>
+					<li>
+					</li>
+					<div class="am_c2_3_tt">
+						<img src="/images/LOGO_w.svg" alt="">
+					</div>
+					<div class="am_c2_3_cc">
+						<div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-1444137855611" name="说明页">
+							<div id="FrontSpecifies_show01-1444137855611" class="FrontSpecifies_show01-d1_c1">
+								<p align="left" style="vertical-align: top; line-height: 25.2pt;">
+									<span style="font-size: 12px;">管家的起源在于法国，只是老派的英国宫廷更加讲究礼仪、细节，将管家的职业理念和职责范围按照宫廷礼仪进行了严格的规范，成为行业标准，英式管家也成为家政服务的经典。</span>
+								</p>
+								<p align="left" style="vertical-align: top; line-height: 25.2pt;">
+									<span style="font-size: 12px;">所以，在英式管家享誉世界的最初，只有世袭贵族和有爵位的名门才能享受，原因无他，出自宫廷血统尊贵而已。</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<a class="am_c2_3_more iframe_box" href="/index/Index/nav/id/1012">
+						详细介绍+
+					</a>
+				</div>
+			</div>
+			<div class="am_c2_c_b">
+			</div>
+		</div>
+		<div class="am_content con3 pre_an">
+			<div class="am_c3_c ">
+				<?php 
+					foreach($docLink as $link){
+						echo
+						'<div class="am_c3_con">
+							<div class="am_c3_con_ot fangk">
+								<li>
+								</li>
+								<li>
+								</li>
+								<li>
+								</li>
+								<li>
+								</li>
+							</div>
+							<div class="am_c3_con_cc">
+								<div class="bg">
+								</div>
+								<a href="/index/Index/page/id/'.$link['FDocID'].'" class="iframe_box">
+									<p>
+										'.$link['FName'].'
+									</p>
+									<p>
+										'.$link['FNOTE'].'
+									</p>
+								</a>
+							</div>
+						</div>';
+					}
+				?>
+			</div>
+			<div class="am_c3_c_b">
+			</div>
+		</div>
+		<div class="am_content con4 pre_an" data-stellar-background-ratio="0.3">
+			<div class="am_c4_c">
+				<div class="am_c4_c_tt">
+					<p>
+						专注打造一流服务
+					</p>
+					<p>
+						Focus to create excellent service
+					</p>
+					<a href="/index/Index/products" class="am_c4_c_tmore iframe_box">
+						查看全部
+					</a>
+				</div>
+				<div class="am_c4_c_cc">
+					<div xmlns="" class="columnSpace" id="elem-FrontProducts_list01-1444073939272" name="商品列表">
+						<!-- 装饰器样式开始 -->
+						<div class="border_00">
+							<div class="border_00-topr">
+								<div class="border_00-topl">
+								</div>
+							</div>
+							<div class="border_00-mid">
+								<div class="borderContent">
+									<div id="FrontProducts_list01-1444073939272" class="FrontProducts_list01-d3_c1_01">
+										<div class="comptitle_00">
+											<strong class="titlestyle_00">商品列表展示</strong>
+										</div>
+
+										<div class="type">
+											<span class="sort">
+											</span>
+										</div>
+										<ul class="mainul productlist-02">
+											<?php
+											foreach($products as $goods){
+												echo
+												'<li class="content column-num30">
+													<div class="pic-module">
+														<div class="pic">
+															<a href="/index/Index/productDetail/item/'.$goods['FItemID'].'" title="'.$goods['FName'].'" target="_self">
+																<img src="/upload/products/'.$goods['FNumber'].'/1.jpg" id="FrontProducts_list01-1444073939272_13" alt="" title="'.$goods['FName'].'"
+																/>
+															</a>
+														</div>
+													</div>
+													<div class="pro-module">
+														<ul class="basic">
+															<li class="code">
+																<h1>
+																	<span>产品名称：</span>
+																	<strong>
+																		<a href="/index/Index/productDetail/item/'.$goods['FItemID'].'" title="'.$goods['FName'].'" target="_self">
+																			'.$goods['FName'].'</a>
+																	</strong>
+																</h1>
+															</li>
+														</ul>
+														<p class="buttonP">
+														</p>
+													</div>
+												</li>';
+											}
+											?>
+
+											<li class="clearBoth"></li>
+										</ul>
+										<script type="text/javascript">
+											//<![CDATA[
+											FrontProducts_list01['FrontProducts_list01-1444073939272_init'] = function () {
+												jQuery(".specChangeImg").click(function () {
+													var data = $(this).metadata();
+													var srcStr = $(this).find("img").attr("src");
+													$(this).parent().find(".specChangeImg").removeClass("click");
+													$(this).addClass("click");
+													if (srcStr != "") {
+														jQuery("#FrontProducts_list01-1444073939272_" + data.id).attr("src", srcStr);
+													}
+												});
+											};
+											jQuery(document).ready(FrontProducts_list01['FrontProducts_list01-1444073939272_init']);
+											//]]>
+										</script>
+									</div>
+									<div class="clearBoth"></div>
+								</div>
+							</div>
+						</div>
+						<!-- 装饰器样式结束 -->
+						<script type="text/javascript">
+						</script>
+					</div>
+				</div>
+			</div>
+			<div class="am_c4_c_b">
+			</div>
+		</div>
+		<div class="am_content con5 pre_an">
+			<div class="am_c5_c">
+				<div class="am_c5_c_tt">
+
+					<div class="am_c5_c_cc">
+						<p>
+							一对一专人管家服务，专业搬家经理提供一对一管家式专属服务；一站式全流程包干服务，更省心，更安心
+						</p>
+						<p>
+							服务管家主动推送，24小时全流程监管，信息主动提前推送；四重专业家私包装，四重专业包装，让每一件物品更安全
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="am_content con6 pre_an" data-stellar-background-ratio="0.3">
+			<div class="am_c6_c">
+				<div class="am_c6_c_tt">
+					<p>
+						搬家百科
+					</p>
+					<p>
+						Movers　Blog
+					</p>
+				</div>
+				<div class="am_c6_c_cc">
+					<div xmlns="" class="columnSpace" id="elem-FrontNews_list01-1444082564106" name="资讯列表" style="display1:none;">
+						<script type="text/javascript">
+							// <![CDATA[
+							FrontNews_list01['FrontNews_list01-1444082564106_init'] = function () {
+								var showDegree = 0;
+								var showQuestionTag = 0;
+								var showMessageCount = 0;
+								var otherShowDegree = 0;
+								var otherShowMessageCount = 0;
+								var otherShowQuestionTag = 0;
+								if (showDegree == '1' || showQuestionTag == '1' || showMessageCount == '1') {
+									FrontNews_list01.getAjaxValueByNewsId("8", "false", showDegree, showMessageCount, showQuestionTag,
+										"FrontNews_list01-1444082564106_VisitedCount_1", "FrontNews_list01-1444082564106_CommentCount_1",
+										"FrontNews_list01-1444082564106_showQuestionTag_1");
+									FrontNews_list01.getAjaxValueByNewsId("17", "false", showDegree, showMessageCount, showQuestionTag,
+										"FrontNews_list01-1444082564106_VisitedCount_2", "FrontNews_list01-1444082564106_CommentCount_2",
+										"FrontNews_list01-1444082564106_showQuestionTag_2");
+									FrontNews_list01.getAjaxValueByNewsId("11", "false", showDegree, showMessageCount, showQuestionTag,
+										"FrontNews_list01-1444082564106_VisitedCount_3", "FrontNews_list01-1444082564106_CommentCount_3",
+										"FrontNews_list01-1444082564106_showQuestionTag_3");
+									FrontNews_list01.getAjaxValueByNewsId("5", "false", showDegree, showMessageCount, showQuestionTag,
+										"FrontNews_list01-1444082564106_VisitedCount_4", "FrontNews_list01-1444082564106_CommentCount_4",
+										"FrontNews_list01-1444082564106_showQuestionTag_4");
+									FrontNews_list01.getAjaxValueByNewsId("4", "false", showDegree, showMessageCount, showQuestionTag,
+										"FrontNews_list01-1444082564106_VisitedCount_5", "FrontNews_list01-1444082564106_CommentCount_5",
+										"FrontNews_list01-1444082564106_showQuestionTag_5");
+								}
+							}
+
+							function setVisited(id, linkUrl, detailOpenStyle) {
+								$.get("/FrontNews.do", "method=getVisitedCountByAjax&newsId=" + id, function (data) {
+									var linkUrl1 = linkUrl;
+									var OpenStyle = detailOpenStyle
+									var url = '/FrontNews.do?method=setVisitedCountByAjax&newsId=' + id + '&times=' + data;
+									$.post(url, function (data) {
+										window.open(linkUrl1, OpenStyle);
+									});
+								}, 'html');
+							}
+							$(FrontNews_list01['FrontNews_list01-1444082564106_init']);
+							// ]]>
+							Date.prototype.Format = function (fmt) { //author: meizz 
+								var o = {
+									"M+": this.getMonth() + 1,
+									"d+": this.getDate(),
+									"h+": this.getHours(),
+									"m+": this.getMinutes(),
+									"s+": this.getSeconds(),
+									"q+": Math.floor((this.getMonth() + 3) / 3),
+									"S": this.getMilliseconds()
+								};
+								if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+								for (var k in o)
+									if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : ((
+										"00" + o[k]).substr(("" + o[k]).length)));
+								return fmt;
+							}
+							window.onload = function () {
+								var startDate = "2017-04-01";
+								var endDate = "2017-05-31";
+								if (startDate != "") {
+									if (endDate != "") {
+										var newDate = new Date().Format("yyyy/MM/dd");
+										var newDateValue = Date.parse(newDate);
+										var endDate1 = endDate.replace(/-/g, "/");
+										var endDateValue = Date.parse(endDate1);
+										if (endDateValue - newDateValue < 0) {
+											var infoMakerValue = document.getElementById("8_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "none";
+											}
+										} else {
+											var infoMakerValue = document.getElementById("8_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "block";
+											}
+										}
+									} else {
+										var infoMakerValue = document.getElementById("8_infoMaker");
+										if (infoMakerValue != null) {
+											infoMakerValue.style.display = "block";
+										}
+									}
+								}
+								var startDate = "2017-04-20";
+								var endDate = "2017-05-31";
+								if (startDate != "") {
+									if (endDate != "") {
+										var newDate = new Date().Format("yyyy/MM/dd");
+										var newDateValue = Date.parse(newDate);
+										var endDate1 = endDate.replace(/-/g, "/");
+										var endDateValue = Date.parse(endDate1);
+										if (endDateValue - newDateValue < 0) {
+											var infoMakerValue = document.getElementById("17_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "none";
+											}
+										} else {
+											var infoMakerValue = document.getElementById("17_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "block";
+											}
+										}
+									} else {
+										var infoMakerValue = document.getElementById("17_infoMaker");
+										if (infoMakerValue != null) {
+											infoMakerValue.style.display = "block";
+										}
+									}
+								}
+								var startDate = "2017-04-17";
+								var endDate = "2017-05-31";
+								if (startDate != "") {
+									if (endDate != "") {
+										var newDate = new Date().Format("yyyy/MM/dd");
+										var newDateValue = Date.parse(newDate);
+										var endDate1 = endDate.replace(/-/g, "/");
+										var endDateValue = Date.parse(endDate1);
+										if (endDateValue - newDateValue < 0) {
+											var infoMakerValue = document.getElementById("11_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "none";
+											}
+										} else {
+											var infoMakerValue = document.getElementById("11_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "block";
+											}
+										}
+									} else {
+										var infoMakerValue = document.getElementById("11_infoMaker");
+										if (infoMakerValue != null) {
+											infoMakerValue.style.display = "block";
+										}
+									}
+								}
+								var startDate = "";
+								var endDate = "";
+								if (startDate != "") {
+									if (endDate != "") {
+										var newDate = new Date().Format("yyyy/MM/dd");
+										var newDateValue = Date.parse(newDate);
+										var endDate1 = endDate.replace(/-/g, "/");
+										var endDateValue = Date.parse(endDate1);
+										if (endDateValue - newDateValue < 0) {
+											var infoMakerValue = document.getElementById("5_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "none";
+											}
+										} else {
+											var infoMakerValue = document.getElementById("5_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "block";
+											}
+										}
+									} else {
+										var infoMakerValue = document.getElementById("5_infoMaker");
+										if (infoMakerValue != null) {
+											infoMakerValue.style.display = "block";
+										}
+									}
+								}
+								var startDate = "";
+								var endDate = "";
+								if (startDate != "") {
+									if (endDate != "") {
+										var newDate = new Date().Format("yyyy/MM/dd");
+										var newDateValue = Date.parse(newDate);
+										var endDate1 = endDate.replace(/-/g, "/");
+										var endDateValue = Date.parse(endDate1);
+										if (endDateValue - newDateValue < 0) {
+											var infoMakerValue = document.getElementById("4_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "none";
+											}
+										} else {
+											var infoMakerValue = document.getElementById("4_infoMaker");
+											if (infoMakerValue != null) {
+												infoMakerValue.style.display = "block";
+											}
+										}
+									} else {
+										var infoMakerValue = document.getElementById("4_infoMaker");
+										if (infoMakerValue != null) {
+											infoMakerValue.style.display = "block";
+										}
+									}
+								}
+							}
+						</script>
+						<div id="FrontNews_list01-1444082564106" class="FrontNews_list01-d3_c1_01">
+							<div>
+								<ul class="comstyle newslist-01">
+									<?php
+										foreach($article as $v){										
+											echo '<li class="content column-num20">
+												<div class="pic">
+													<a href="/index/Index/page/id/'.$v['FID'].'" title="'.$v['FName'].'" target="_self">
+														<img src="/upload/document/'.$v['FNumber'].'/1.jpg" alt="'.$v['FName'].'" title="'.$v['FName'].'" />
+													</a>
+												</div>
+												<div class="newslist">
+													<ul>
+														<li class="summary">
+															<h3>概要：</h3>
+															<p>'.mb_substr($v['FNOTE'],0,70).'...</p>
+														</li>
+													</ul>
+												</div>
+												<div class="newstitle">
+													<ul>
+														<li class="title">
+															<h3>
+																<a "/index/Index/page/id/'.$v['FID'].'" title="'.$v['FName'].'" target="_self">
+																	'.mb_substr($v['FName'],0,16).'</a>
+																</a>
+															</h3>
+														</li>
+													</ul>
+												</div>
+											</li>';
+										}
+									?>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="am_c6_c_b">
+			</div>
+		</div>
+		<div class="am_content con7 pre_an">
+			<div class="am_c7_c">
+				<div class="am_c7_cc">
+					<div class="am_c7_cl1">
+						<img src="/images/contact_title.svg" alt="">
+					</div>
+					<div class="am_c7_cl2">
+						<div class="am_c7_cl2_cc">
+							<div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-1444138117481" name="说明页">
+								<div id="FrontSpecifies_show01-1444138117481" class="FrontSpecifies_show01-d1_c1">
+									<p>
+										<span style="font-size: 12pt;">深圳罗湖区嘉宾路爵士大厦16A06-07室 </span>
+									</p>
+									<p>
+										Room 16A06-07, 16th Floor, Jazz Building, Jiabing Road, Luohu District, Shenzhen </p>
+									<p>
+										搬家热线：400-6010-365</p>
+									<p>
+										传真：+86 755-25901858</p>
+									<p>
+										邮箱：info@eanta365.com</p>
+									<p>
+										网址：www.eanta365.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="am_c7_cc">
+					<div class="am_c7_cr1">
+						<div class="am_c7_cr1_tt">
+							<p>
+								在线留言
+							</p>
+							<p>
+								MESSAGE
+							</p>
+						</div>
+						<a href="/index/Index/nav/id/1021" class="am_c7_cr1_bb iframe_box">
+							+
+						</a>
+					</div>
+					<div class="am_c7_cr2">
+						<img src="/images/LOGO_NEW.svg" alt="">
+					</div>
+					<div class="am_c7_cr3">
+						<div class="am_c7_cr3_cc">
+							<p>
+								<img src="/images/weibo_erweima.png" alt="">
+							</p>
+							<p>
+								<img src="/images/weibo_erweima.png" alt="">
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="am_c7_c_b">
+			</div>
+		</div>
+		<div class="am_content con8">
+			<div class="am_c8_c">
+				<div class="columnSpace" id="elem-FrontSpecifies_show01-1444138265729" name="说明页">
+					<div id="FrontSpecifies_show01-1444138265729" class="FrontSpecifies_show01-d1_c1">
+						<p>
+							<span style="font-family:黑体,tahoma,arial,宋体,sans-serif;">
+								<span style="font-size:32px;">
+									<strong>中国品牌 &nbsp;国人骄傲</strong>
+								</span>
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="am_c8_c_mid">
+				</div>
+				<div class="columnSpace" id="elem-FrontSpecifies_show01-1444138391101" name="说明页">
+					<div id="FrontSpecifies_show01-1444138391101" class="FrontSpecifies_show01-d1_c1">
+						<p class="child2">
+							Copyright &copy; 2018　易安达国际搬家　All Rights Reserved.
+							<a href="http://www.miibeian.gov.cn/" se_prerender_url="loading">
+								粤ICP备17000440号</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="resize951" style="display:none">
+		</div>-->
+	<div class="iframe_cus iframe_effect iframe_box_close">
+		<div class="iframe_cus_bg">
+		</div>
+		<div class="iframe_cus_in">
+			<div id="iframeBox">
+				<iframe class="iframe_content" src="" frameborder="0">
+				</iframe>
+			</div>
+			<div class="iframe_close_btn iframe_box_close">
+				<img src="/images/iframe_close_btn.svg" alt="">
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			function resizew() {
+				winHeight = document.documentElement.clientHeight;
+				winWidth = document.documentElement.clientWidth;
+				$(".resize951").width(winWidth);
+				if (navigator.userAgent.match(/iPad|iPhone|Android/i)) {
+					$('#iframeBox').addClass("overflowa");
+
+				};
+				if (winHeight > 815) {
+					$(".resize95").height(winHeight);
+					$(".resize951").height(winHeight)
+				};
+				if (winHeight < 815) {
+					$(".resize95").height(815);
+					$(".resize951").height(815)
+				};
+				if (winHeight < 560) {
+
+					$(".am_tmenu_c_fix").addClass("ohshit")
+				} else {
+
+					$(".am_tmenu_c_fix").removeClass("ohshit")
+				};
+
+				ppd_width = $(".am_c4_c_cc li.content:eq(2) , .am_c4_c_cc li.content:nth-child(2)").width();
+				$(".am_c4_c_cc li.content").height(ppd_width * 0.773);
+				$(".iframe_cus").height(winHeight);
+				$(".iframe_cus_in").height(winHeight - 65);
+				$(".loading_s").height(winHeight);
+
+			};
+			resizew();
+			$(window).resize(function () {
+				resizew();
+				setTimeout(function () {
+					resizew();
+				}, 1500);
+			})
+		});
+	</script>
+	<script>
+		/*
+									$(document).ready(function() {
+										function resizew1() {
+										mainwidth = $(".am_main").height();
+						                    $("body").height(mainwidth);
+						                    
+										};
+										resizew1();
+										$(".am_main").resize(function() {
+											resizew()
+										})
+									});*/
+	</script>
+	<script>
+	</script>
+	<script>
+		$(document).ready(function () {
+			setTimeout(function () {
+					$('.fuscn_slider').superslides({
+						play: 10000,
+						animation_speed: 2000,
+						animation_easing: 'easeInOutCirc',
+						animation: 'fade',
+						inherit_width_from: $(".resize951"),
+						inherit_height_from: $(".resize951"),
+						pagination: true,
+						hashchange: false,
+						scrollable: true,
+					})
+				},
+				800)
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(".mini_btn").click(function () {
+				$(".am_tmenu_c_fix , .am_tmenu_c , body , .mini_btn").toggleClass("on")
+			});
+			$(".am_tmenu_c_fix li a").click(function () {
+				$(".am_tmenu_c_fix , .am_tmenu_c , body , .mini_btn").removeClass("on")
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(".pre_an").addClass("reactive");
+			$(".am_c4_c_cc li.content").addClass("reactive");
+			$(window).scroll(function (event) {
+				winHeight = document.documentElement.clientHeight;
+				winWidth = document.documentElement.clientWidth;
+				var scrolled = $(this).scrollTop();
+				//var scrolled = $("body").scrollTop();
+				$(".pre_an").each(function () {
+					var $this = $(this);
+					if (scrolled > $this.offset().top - (winHeight * 0.6)) {
+						$this.removeClass("reactive");
+						$this.addClass("active")
+					}
+					if (scrolled <= $this.offset().top - (winHeight - 320)) {
+						$this.addClass("reactive");
+						$this.removeClass("active")
+					}
+				});
+				$(".am_c4_c_cc li.content").each(function () {
+					var $this = $(this);
+					if (scrolled > $this.offset().top - (winHeight * 0.9)) {
+						$this.removeClass("reactive")
+					}
+					if (scrolled <= $this.offset().top - (winHeight * 1)) {
+						$this.addClass("reactive")
+					}
+				});
+				$(".am_tmenu_c").each(function () {
+					var $this = $(this);
+					if (scrolled > $this.offset().top + 30) {
+						$this.addClass("addbg")
+					}
+				});
+				$(".pos_fl").each(function () {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight));
+					if ( /*scrolled >= $this.offset().top - (winHeight * 1.2) &&*/ winWidth > 1200) {
+						tt = (0 - (0 - t / 9 + 100) * 2) + "px";
+						pdt = (0 + t / 9 - 100) * 2.3 + "px";
+						pdt2 = (0 + t / 20 - 40) * 2.5 + "px";
+						pdt3 = (0 + t / 20 - 50) * 1 + "px";
+
+						tr_tt = "translateY(" + tt + ")";
+						tr_pdt = "translateY(" + pdt + ")";
+						tr_pdt2 = "translateY(" + pdt2 + ")";
+						tr_pdt3 = "translateY(" + pdt3 + ")";
+
+						$(".am_c2_1_img").css("transform", tr_tt);
+						$(".am_c2_c_tt").css("transform", tr_pdt);
+						$(".am_c2_2_c").css("transform", tr_pdt2);
+						$(".am_c2_3").css("transform", tr_pdt3);
+
+					}
+				});
+				$(".am_c3_c").each(function () {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight / 2) + 190);
+					if ( /*scrolled >= $this.offset().top - (winHeight * 1.2) &&*/ winWidth > 1200) {
+						tt = (t / 5) + "px";
+						tr_tt = "translateY(" + tt + ")";
+						$(".am_c3_c").css("transform", tr_tt);
+
+
+					}
+				});
+				$(".am_c6_c").each(function () {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight / 2) + 270);
+					if ( /*scrolled >= $this.offset().top - (winHeight * 1.2) &&*/ winWidth > 1200) {
+						tt = (t / 7.5) + "px";
+						tr_tt = "translateY(" + tt + ")";
+						$(".am_c6_c").css("transform", tr_tt);
+
+
+					}
+				});
+				$(".am_c4_c").each(function () {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight / 2) + 650);
+					if ( /*scrolled >= $this.offset().top - (winHeight * 1.2) &&*/ winWidth > 1200) {
+						tt = (t / 10) + "px";
+						tr_tt = "translateY(" + tt + ")";
+						$(".am_c4_c").css("transform", tr_tt);
+
+
+					}
+				});
+				$(".am_c5_c_none").each(function () {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight / 2) + 110);
+					if ( /*scrolled >= $this.offset().top - (winHeight * 1.2) &&*/ winWidth > 1200) {
+						tt = (0 - t / 10) + "px";
+						tr_tt = "translateY(" + tt + ")";
+						$(".am_c5_c").css("transform", tr_tt);
+
+
+					}
+				});
+				/*$(".am_c6_c_tt p:nth-child(1)").each(function() {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight/2) + 250);
+					if ( winWidth > 1200  ) {
+						tt = (0 - t/15 ) + "px";
+						tr_tt = "translateX(" + tt + ")";
+						$(".am_c6_c_tt p:nth-child(1)").css("transform", tr_tt);
+						
+						
+					}
+				});
+				$(".am_c6_c_tt p:nth-child(2)").each(function() {
+					var $this = $(this);
+					t = scrolled - ($this.offset().top - (winHeight/2) + 250);
+					if (  winWidth > 1200  ) {
+						tt = ( t/15 ) + "px";
+						tr_tt = "translateX(" + tt + ")";
+						$(".am_c6_c_tt p:nth-child(2)").css("transform", tr_tt);
+						
+						
+					}
+				});*/
+				/*	$(".am_main").each(function() {
+						var $this = $(this);
+						t = scrolled;
+						if ( winWidth > 1200  ) {
+							tt = (0 - t) + "px";
+							tr_tt = "translateY(" + tt + ")";
+							$(".am_main").css("transform", tr_tt);
+						}
+					});*/
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(".am_c4_c_cc li a").addClass("iframe_box");
+			$(".am_c6_c_cc li a").addClass("iframe_box");
+			$(".FrontNews_list01-d3_c1_01 ul.newslist-01").addClass("own-celstyle");
+			$(".FrontNews_list01-d3_c1_01 ul.newslist-01").addClass("owl-carousel");
+			$(".FrontNews_list01-d3_c1_01 ul.newslist-01").addClass("owl-theme")
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			setTimeout(function () {
+					$(".own-celstyle").owlCarousel({
+						items: 3,
+						responsive: {
+							0: {
+								items: 1,
+							},
+							700: {
+								items: 2,
+							},
+							1070: {
+								items: 3,
+							},
+							1330: {
+								items: 4,
+							},
+						},
+					})
+				},
+				500)
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(".am_tmenu_c").headroom({
+				tolerance: {
+					up: 5,
+					down: 5,
+				},
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('.fancybox_one').fancybox({
+				padding: 0,
+				openEffect: 'elastic',
+				'transitionIn': 'fade',
+				'transitionOut': 'fade',
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			var iframe_con = $('.iframe_content');
+			var iframe_cc = $('.iframe_cus');
+			var iframe_eff = $('.iframe_effect');
+			$('.iframe_box').click(function (ifa) {
+				winWidth = document.documentElement.clientWidth;
+				if (navigator.userAgent.match(/iPad|iPhone/i)) {
+					$('#iframeBox').addClass("overflowa");
+					$('.am_main').addClass("iospath1");
+				} else {};
+				ifa.preventDefault();
+				var alink = $(this).attr("href");
+				iframe_con.attr("src", alink);
+				iframe_eff.addClass("idisplay");
+				setTimeout(function () {
+						iframe_eff.addClass("iopen");
+						//$('.iframe_cus').velocity( {top: "0%"} );
+					},
+					50);
+				return false
+
+			});
+			$('.iframe_box_close').click(function () {
+				iframe_eff.removeClass("iopen");
+				//$('.iframe_cus').velocity({top: "-110%"});
+				setTimeout(function () {
+						iframe_eff.removeClass("idisplay");
+					},
+					1480);
+				iframe_con.attr("src", "")
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			setTimeout(function () {
+					$(".loading_s").fadeOut(800);
+					$(".am_con1_cen").removeClass("load_pre");
+					$("body").removeClass("load_pre")
+				},
+				1200)
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".am_c4_c_cc li.content .pic-module a").each(function () {
+				$(this).append(" <div class='pic_a_bg'></div>")
+			});
+			$(".am_c4_c_cc li .pro-module li.code a").each(function () {
+				$(this).append(" <div class='pro_a_more'> + </div>")
+			});
+			$(".am_c6_c_cc li.content").each(function () {
+				$(this).append(" <div class='news_a_more'></div>")
+			});
+			$(".fuscn_slider .slides-container").append($(".slideBox .bd ul").children())
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".news_botton").click(function () {
+				/*$("html,body").animate({
+					scrollTop: ($(".am_content.con6").offset().top - 50)
+				},
+				2500);*/
+				$(".am_content.con6").velocity("scroll", 2000);
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			var tilt = -5;
+			<!--跟随方向与透视大小-->
+			var curTiltX = 0;
+			var curTiltY = 0;
+			window.addEventListener("mousemove",
+				function (e) {
+					if ((e.pageX / window.innerWidth) * 100 >= 50) curTiltX = (tilt / 100) * (((e.pageX - (window.innerWidth / 2)) /
+						(window.innerWidth / 2)) * 100) - ((tilt / 100) * (((e.pageX - (window.innerWidth / 2)) / (window.innerWidth /
+						2)) * 100) * 2);
+					else curTiltX = tilt - ((tilt / 100) * ((e.pageX / (window.innerWidth / 2)) * 100));
+					if ((e.pageY / window.innerHeight) * 100 >= 50) curTiltY = (tilt / 100) * (((e.pageY - (window.innerHeight / 2)) /
+						(window.innerHeight / 2)) * 100);
+					else curTiltY = (tilt - ((tilt / 100) * ((e.pageY / (window.innerHeight / 2)) * 100))) - ((tilt - ((tilt / 100) *
+						((e.pageY / (window.innerHeight / 2)) * 100))) * 2);
+					$('.container').css("transform", "perspective(300px) rotateY(" + curTiltX + "deg) rotateX(" + curTiltY + "deg)");
+					$('.fuscn_slider li img ').css("transform", "perspective(1500px) translateX(" + (0 - curTiltX * 6) +
+						"px) rotateY(" + (0 - curTiltX * 0.2) + "deg)  scale(1)");
+					img_transX = (0 - curTiltX * 6) + "px";
+
+					//$('.fuscn_slider li img ').velocity({ translateX: "img_transX"});
+				});
+
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".bg_scale , .am_c3_c , .am_c5_c_tt a img , .t_logo").mouseover(function () {
+				$(".fix_banner").addClass("bg_scale")
+			});
+			$(".bg_scale , .am_c3_c , .am_c5_c_tt a img , .t_logo").mouseout(function () {
+				$(".fix_banner").removeClass("bg_scale")
+			});
+			$(".t_logo").mouseover(function () {
+				$(".fix_banner").addClass("bg_blur")
+			});
+			$(".t_logo").mouseout(function () {
+				$(".fix_banner").removeClass("bg_blur")
+			})
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(window).stellar({
+				horizontalScrolling: false,
+			})
+		});
+	</script>
+
+	<script>
+		/*解决iframe在iPad/iPhone内不能滚动的问题*/
+		/**
+		 *   @param  iframeID 		iframe的id或者iframeElement[Doc Object]
+		 *   @param  iframeWrapper	用于包装iframe的元素
+		 */
+		function scrollIframeForIOS(iframe, iframeWrapper) {
+			if (!navigator.userAgent.match(/iPad|iPhone|Android/i)) return false;
+
+			var touchY = 0,
+				touchX = 0;
+
+			iframe = typeof (iframe) == "string" ? document.getElementById(iframe) : iframe;
+
+			iframe.onload = function () {
+
+				var ifrWin = iframe.contentWindow,
+					ifrDoc = ifrWin.document;
+
+				// iframe的上一级节点
+				iframeWrapper = iframeWrapper || ifrWin.frameElement.parentNode;
+
+				// 记录手指按下的位置
+				ifrDoc.body.addEventListener("touchstart", function (event) {
+					touchX = event.targetTouches[0].pageX;
+					touchY = event.targetTouches[0].pageY;
+				});
+
+				ifrDoc.body.addEventListener("touchmove", function (event) {
+					e.preventDefault(); // 阻止整个页面拖动
+					iframeWrapper.scrollLeft += (touchX - event.targetTouches[0].pageX);
+					iframeWrapper.scrollTop += (touchY - event.targetTouches[0].pageY);
+				});
+			}
+
+			return true;
+		};
+	</script>
+
+
+	<script>
+		/*
+						        $(function () {
+						  $.srSmoothscroll({
+						    // defaults
+						    step: 100,
+						    speed: 700,
+						    ease: 'swing',
+						    target: $('body'),
+						    container: $(window)
+						  })
+						})*/
+	</script>
+	<div id="elem-FrontPublic_wisher01-2014"></div>
+	<script language='javascript' src='/styles/visittrack.js' type='text/javascript'></script>
+	<script type='text/javascript'>
+		var visittrack_siteId = 'ZTS_ZT_ZH_CN_2015070300234';
+		VisitTrack.visittrack_log(visittrack_siteId, visittrack_url);
+	</script>
+</body>
+
+</html>

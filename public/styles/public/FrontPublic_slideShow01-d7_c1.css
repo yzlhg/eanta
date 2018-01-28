@@ -1,0 +1,128 @@
+
+@charset "utf-8";
+.FrontPublic_slideShow01-d7_c1{
+   width: 100%;
+}
+.slideBox_wrap{
+   position: relative;
+    height: 330px;
+    overflow: hidden;
+}
+.slideBox_row{
+   position1: absolute;
+    width: 410px;
+    margin-left1: -720px;
+    left1: 50%;
+}
+.slideBox{
+   position: relative;
+    height: 330px;
+    overflow: hidden;
+}
+.slideBox .hd{
+   z-index: 1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    height: 20px;
+    overflow: hidden;
+    left: 0px;
+}
+.slideBox .hd UL{
+   zoom: 1;
+    overflow: hidden;
+}
+.slideBox .hd UL LI{
+   filter: alpha(opacity=60);
+    line-height: 99px;
+    margin: 0px 5px;
+    width: 8px;
+    zoom: 1;
+    display: inline;
+    height: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    -moz-opacity: 0.60;
+    opacity: 0.6;
+}
+.slideBox .hd UL LI.on{
+   filter: alpha(opacity=100);
+    background-position: 0px 0px;
+    -moz-opacity: 0.100;
+    opacity: 1;
+}
+.slideBox .bd{
+   z-index: 0;
+    position: relative;
+    height: 100%;
+}
+.slideBox .bd UL LI{
+   width: 100%;
+    height: 340px;
+}
+.slideBox .bd IMG{
+   width: 100%;
+    display: block;
+    height1: 330px;
+}
+.slideBox .prev{
+   z-index: 100;
+    position: absolute;
+    margin-top: -60px;
+    width: 60px;
+    background: url(/images/public/arr.png) no-repeat 0px 0px;
+    height: 123px;
+    margin-left: -68px;
+    overflow: hidden;
+    top: 50%;
+    left: 20%; display:none;
+}
+.slideBox .next{
+   z-index: 100;
+    position: absolute;
+    margin-top: -60px;
+    width: 60px;
+    background: url(/images/public/arr.png) no-repeat 0px 0px;
+    height: 123px;
+    margin-left: -500px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%; display:none;
+}
+.slideBox .prev:hover{
+   z-index: 100;
+    position: absolute;
+    margin-top: -60px;
+    width: 60px;
+    background: url(/images/public/arr_over.png) no-repeat 0px 0px;
+    height: 123px;
+    margin-left: -500px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+}
+.slideBox .next:hover{
+   z-index: 100;
+    position: absolute;
+    margin-top: -60px;
+    width: 60px;
+    background: url(/images/public/arr_over.png) no-repeat 0px 0px;
+    height: 123px;
+    margin-left: -500px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+}
+.slideBox .next:hover{
+   background-position: 0px -120px;
+    right: 50%;
+    margin-right: -500px;
+    left: auto;
+}
+.slideBox .next{
+   background-position: 0px -120px;
+    right: 20%;
+    margin-right: -68px;
+    left: auto;
+}

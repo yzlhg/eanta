@@ -1,0 +1,126 @@
+
+@charset "utf-8";
+/** 全局样式 **/
+
+.FrontMessages_emit01-d1_c1 {
+	width:99%;
+	margin:0 auto;
+	
+	clear:both;
+	overflow:hidden;
+	text-align:left;
+}
+/** 图片 **/
+
+.FrontMessages_emit01-d1_c1 img {
+	vertical-align:middle;
+}
+/** 输入框 **/
+
+.FrontMessages_emit01-d1_c1 .input {
+	border:1px solid #ddd;
+	height:20px;
+	line-height:20px;
+	width:170px;
+	margin-bottom:5px;
+}
+/** 输入框 灰色字体 **/
+
+.FrontMessages_emit01-d1_c1 .input-gray {
+	/*color:#999;*/
+}
+.FrontMessages_emit01-d1_c1 .textarea {
+	border:1px solid #ddd;
+	width1:300px;
+	height:60px;
+	font-size:12px;
+	margin:4px 0;
+}
+/** 按钮 **/
+
+/*.FrontMessages_emit01-d1_c1 .button {
+	width:71px;
+	height:31px;
+	line-height:31px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	border:0;
+	cursor:pointer;
+}*/
+/*.FrontMessages_emit01-d1_c1 .button-on {
+	background:url(/images/messages/btn-blue1-01.gif) 0 0 no-repeat;
+}*/
+/*.FrontMessages_emit01-d1_c1 .button-up {
+	background:url(/images/messages/btn-blue1-02.gif) 0 0 no-repeat;
+}*/
+/** 提示 **/
+
+.FrontMessages_emit01-d1_c1 .tips {
+	padding-left:10px;
+	color:#A0A0A0;
+	    font-size: 0.875em;
+}
+/** 星号 **/
+
+.FrontMessages_emit01-d1_c1 .fontred {
+	color:#f60;
+}
+.FrontMessages_emit01-d1_c1 .fontnone {
+	float:left;
+	width:0px;
+}
+/** 表单样式 **/
+
+.FrontMessages_emit01-d1_c1 table {
+	margin-top:20px;
+	 font-size: 0.875em;
+}
+.FrontMessages_emit01-d1_c1 table th,
+ .FrontMessages_emit01-d1_c1 table td {
+	height:30px;
+}
+.FrontMessages_emit01-d1_c1 table th {
+	text-align: right;
+    font-weight: normal;
+    width: 80px !important;
+    font-size: 0.885em;
+    color: #fff;
+        vertical-align: top;
+}
+.FrontMessages_emit01-d1_c1 table td {
+	text-align:left;
+	width1:85%;
+}
+.FrontMessages_emit01-d1_c1 table tr.point img {
+}
+.FrontMessages_emit01-d1_c1 table tr.express img {
+	padding:0 2px;
+}
+.FrontMessages_emit01-d1_c1 table tr.verify img {
+	padding-top1:5px;
+	width:auto;
+}
+.FrontMessages_emit01-d1_c1 table tr .text-tip {
+	width1:300px;
+	padding-left1:10px;
+}
+.FrontMessages_emit01-d1_c1 table tr.info .text-tip {
+	width:100%;
+	padding-left1:10px;
+}
+/**选项**/
+
+.FrontMessages_emit01-d1_c1 table .point td img,
+.FrontMessages_emit01-d1_c1 table .point td span,
+.FrontMessages_emit01-d1_c1 table .point td input {
+	vertical-align:middle;
+}
+.FrontMessages_emit01-d1_c1 table .point td span {
+	padding-right:10px;
+}
+/** 按钮位置 **/
+
+.FrontMessages_emit01-d1_c1 table tr.button-position {
+	height:50px;
+}

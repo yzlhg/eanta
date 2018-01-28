@@ -1,0 +1,145 @@
+
+@charset "utf-8";
+/** 全局样式 **/
+
+.FrontMessages_customizeEmit01-d1_c1 {
+	width:100%;
+	margin:0 auto;
+	
+	clear:both;
+	overflow:hidden;
+	text-align:left;
+}
+/** 图片 **/
+
+.FrontMessages_customizeEmit01-d1_c1 img {
+	vertical-align:middle;
+}
+/** 输入框 **/
+
+.FrontMessages_customizeEmit01-d1_c1 .input {
+	border:1px solid #999;
+	height:25px;
+	line-height:25px;
+	width:296px;
+}
+.FrontMessages_customizeEmit01-d1_c1 .text-oper1 {
+	clear:both;
+	margin-bottom:5px;
+}
+
+/** 输入框 灰色字体 **/
+
+/** 单行文本 **/
+.FrontMessages_customizeEmit01-d1_c1 .input-gray {
+	border:1px solid #999;
+	line-height:25px;
+}
+
+
+.FrontMessages_customizeEmit01-d1_c1 .textarea {
+	border:1px solid #999;
+	width:300px;
+	height:100px;
+	font-size:12px;
+	margin:4px 0;
+}
+/** 按钮 **/
+
+/*.FrontMessages_customizeEmit01-d1_c1 .button {
+	width:71px;
+	height:31px;
+	line-height:31px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	border:0;
+	cursor:pointer;
+}*/
+/*.FrontMessages_customizeEmit01-d1_c1 .button-on {
+	background:url(/images/messages/btn-blue1-01.gif) 0 0 no-repeat;
+}*/
+/*.FrontMessages_customizeEmit01-d1_c1 .button-up {
+	background:url(/images/messages/btn-blue1-02.gif) 0 0 no-repeat;
+}*/
+/** 提示 **/
+
+.FrontMessages_customizeEmit01-d1_c1 .tips {
+	padding-left:10px;
+	color:#fff;
+	font-size:10px;
+}
+
+.text-oper a{font-size:10px;}
+/** 星号 **/
+
+.FrontMessages_customizeEmit01-d1_c1 .fontred {
+	color:#f60;
+	float:left;
+	width:11px!important;
+	_width:8px!important;	
+}
+.FrontMessages_customizeEmit01-d1_c1 .fontnone {
+	float:left;
+	width:11px!important;
+	_width:8px!important;
+}
+/** 表单样式 **/
+
+.FrontMessages_customizeEmit01-d1_c1 table {
+	margin-top:0px;
+}
+.FrontMessages_customizeEmit01-d1_c1 table th,
+.FrontMessages_customizeEmit01-d1_c1 table td {
+	height:35px;
+}
+.FrontMessages_customizeEmit01-d1_c1 table th {
+	text-align:right;
+	font-weight:normal;
+	width:20%;
+	padding-right:10px;
+}
+.FrontMessages_customizeEmit01-d1_c1 table td {
+	text-align:left;
+	width:75%;
+}
+.FrontMessages_customizeEmit01-d1_c1 table tr.point img {
+}
+.FrontMessages_customizeEmit01-d1_c1 table tr.express img {
+	padding:0 2px;
+}
+.FrontMessages_customizeEmit01-d1_c1 table tr.verify img {
+	padding:0 5px;
+}
+.FrontMessages_customizeEmit01-d1_c1 table tr .text-tip {
+	width:300px;
+	padding-left:10px;
+	display:none;
+}
+.FrontMessages_customizeEmit01-d1_c1 table tr.info .text-tip {
+	width:300px;
+	padding-left:10px;
+	display:none;
+}
+.FrontMessages_customizeEmit01-d1_c1 table tr.remina-sms input {
+	margin-right:6px;
+}
+/**选项**/
+
+.text-oper span{ display:none;}
+
+.FrontMessages_customizeEmit01-d1_c1 table .point td img,
+.FrontMessages_customizeEmit01-d1_c1 table .point td span,
+.FrontMessages_customizeEmit01-d1_c1 table .point td input {
+	vertical-align:middle;
+}
+.FrontMessages_customizeEmit01-d1_c1 table .point td span {
+	padding-right:10px;
+	float:left;
+	margin-left:10px;
+}
+/** 按钮位置 **/
+
+.FrontMessages_customizeEmit01-d1_c1 table tr.button-position {
+	height:50px;
+}

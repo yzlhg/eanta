@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<HTML>
+
+<head>
+	<META content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>
+		<?php echo $head['FName'] ?>
+	</title>
+	<meta name="keywords" content="<?php echo $head['FKeywords'] ?>" />
+	<meta name="description" content="<?php echo $head['FNote'] ?>" />
+	<meta name="author" content="<?php echo $head['FAuthor'] ?>" />
+	<LINK href="/styles/page_neiye.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/publicScripts/common/jquery.js"></script>
+	<script type="text/javascript" src="/publicScripts/lib.min.js"></script>
+	<script src="/publicScripts/components/FrontProductsCategory_show01.min.js"></script>
+
+	<link href="/styles/page_a_zujiantest.css" rel="stylesheet" type="text/css" />
+	<SCRIPT src="/styles/jquery-1.11.3.min.js"></SCRIPT>
+</HEAD>
+
+<BODY class="index_neiye" id="products_detail">
+	<DIV class="pageWidth" id="box_root">
+		<DIV class="am_main_ny">
+			<DIV class="neiye_c">
+				<DIV class="neiye_title_t">
+					<DIV class="ny_ttl">
+						<IMG alt="" src="/images/LOGO_NEW.svg" />
+						<DIV class="ny_ttl_img2">
+							<IMG alt="" src="/images/neiye_bigsidetext.svg" />
+						</DIV>
+						<DIV class="neiye_prd_list">
+							<DIV class="columnSpace" id="elem-FrontProductsCategory_show01-1444121118891" name="商品分类">
+								<script type="text/javascript">
+									//<![CDATA[
+									FrontProductsCategory_show01['FrontProductsCategory_show01-1444121118891_init'] = function () {
+										jQuery("div[class^=FrontProductsCategory_show01-d1] > div.menu-first > ul > li").hover(function () {
+											jQuery("div[class^=FrontProductsCategory_show01-d1] .menu-second").hide();
+											jQuery(this).children("div.menu-second").show();
+											jQuery(this).children("div.menu-second > a.menu-text1").addClass("current");
+										}, function () {
+											jQuery("div[class^=FrontProductsCategory_show01-d1] .menu-second").hide();
+											jQuery(this).children("div.menu-second > a.menu-text1").removeClass("current");
+										});
+									}
+									jQuery(document).ready(FrontProductsCategory_show01['FrontProductsCategory_show01-1444121118891_init']);
+									//]]>
+								</script>
+								<div id="FrontProductsCategory_show01-1444121118891" class="FrontProductsCategory_show01-d1_c1">
+									<div class="menu-first">
+										<ul>
+												<?php 
+												foreach($goods_nav as $value){
+													echo
+													'<li class="menu-none">
+														<a href="/index/Index/products/list/'.$value['FItemID'].'" target="_self" class="menu-text1">'.$value['FName'].'</a>
+													</li>';
+												}
+											?>
+										</ul>
+									</div>
+								</div>
+							</DIV>
+						</DIV>
+					</DIV>
+					<DIV class="ny_ttr">
+						<DIV class="ny_ttr_con">
+							<P><?php echo $goods_info['FName'] ?></P>
+						</DIV>
+					</DIV>
+				</DIV>
+				<DIV class="clearb"></DIV>
+				<DIV class="neiye_content">
+
+					<DIV class="columnSpace" id="elem-FrontProducts_detail02-1444121569129" name="商品详细信息">
+						<script type="text/javascript" src="/publicScripts/products/FrontProducts.js"></script>
+						<div id="FrontProducts_detail02-1444121569129" class="FrontProducts_detail02-d7_c1">
+							<script type="text/javascript" src="/widgets/jquery-plugin/jquery.metadata.js"></script>
+							<script type="text/javascript" src="/publicScripts/products/FrontProducts.js"></script>
+							<script type="text/javascript">
+								jQuery(document).ready(function () {
+									var productIshave = "false";
+									FrontProducts_detail02_images();
+									jQuery("li.user-choose div.choose-property span.specValue").click(function () {
+										var detail02 = jQuery("#FrontProducts_detail02-1444121569129");
+										var productImgs = detail02.find("div.picarea div.imgbox ul li");
+										if (jQuery(this).hasClass("click")) {
+											jQuery(this).removeClass("click");
+											jQuery(this).parent("li").children("input[type='hidden']").val("");
+										} else {
+											jQuery(this).parent("li").children("span.specValue").removeClass("click");
+											jQuery(this).addClass("click");
+											var specValueId = jQuery(this).metadata().specValueId;
+											jQuery(this).parent("li").children("input[type='hidden']").val(specValueId);
+										}
+										if (productIshave == "true") {
+											jQuery("#FrontProducts_detail02-1444121569129_buyBtn").show();
+										} else {
+											jQuery("#FrontProducts_detail02-1444121569129_lackBtn").hide();
+										}
+										FrontProducts_detail02_images();
+										var productSpecs = jQuery(this).parents("div.choose-property");
+										var noChooseSpec = productSpecs.find("input[type='hidden'][name^='spec'][value='']");
+										var productItem = productSpecs.children("ul.specifications");
+										if (noChooseSpec.length == 0) {
+											jQuery.ajax({
+												url: "/comp-FrontProductsItem_detailBySpecJson01-001",
+												type: 'post',
+												dataType: 'json',
+												data: jQuery(this).parents("form:first").serialize(),
+												timeout: 5000,
+												cache: false,
+												async: true,
+												error: function () {},
+												success: function (json) {
+													if (typeof (json.id) == "undefined") {
+														productSpecs.children("input[type='hidden'][name='productItemId']").val("");
+														productItem.hide();
+													} else {
+														productSpecs.children("input[type='hidden'][name='productItemId']").val(json.id);
+														productItem.children("li.item").children("span:last").text(json.itemCode);
+														productItem.children("li.price").children("span:last").text(json.finalPrice.toFixed(2));
+														productItem.children("li.weight").children("span:last").text(json.weight.toFixed(2));
+														productItem.show();
+													}
+												}
+											});
+										} else {
+											productSpecs.children("input[type='hidden'][name='productItemId']").val("");
+											productItem.hide();
+										}
+									});
+								});
+
+								function FrontProducts_detail02_images() {
+									jQuery.ajax({
+										url: "/comp-FrontProductsItem_imagesBySpecJson01-001",
+										type: 'post',
+										dataType: 'json',
+										data: jQuery("#FrontProducts_detail02-1444121569129 form").serialize(),
+										timeout: 5000,
+										cache: false,
+										async: true,
+										error: function () {},
+										success: function (json) {
+											var imagesLi = jQuery("#FrontProducts_detail02-1444121569129 div.picarea div.imgbox ul li");
+											imagesLi.empty();
+											for (var i = 0; i < json.length; i++) {
+												imagesLi.append("<a href='javascript:'><img onclick='changeBigImg(this)' src='" + json[i] +
+													"' alt='' onerror=\"this.src='/images/common/noimage.jpg'\"/></a>");
+											}
+											var firstImg = imagesLi.find("a:first img");
+											if (firstImg.length > 0) {
+												changeBigImg(firstImg.get(0));
+											}
+											FrontProducts_detail02_initScrollCount();
+											if (jQuery("#FrontProducts_detail02-1444121569129_key10ScrollDiv").length > 0) {
+												FrontProducts_detail02_initScroll();
+											}
+										}
+									});
+								}
+
+								function FrontProducts_detail02_initScrollCount() {
+									var maxImageNum = jQuery("#FrontProducts_detail02-1444121569129_key10Picarea").innerHeight() / jQuery(
+										"#FrontProducts_detail02-1444121569129_key10imglist > a").outerHeight(true);
+									jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a").hide();
+									jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a").each(function (i) {
+										if (i < maxImageNum - 1) {
+											jQuery(this).show();
+										}
+									});
+								}
+
+								function FrontProducts_detail02_recalculated() {
+									var j = 0;
+									var maxImageNum = jQuery("#FrontProducts_detail02-1444121569129_key10Picarea").innerHeight() / jQuery(
+										"#FrontProducts_detail02-1444121569129_key10imglist > a").outerHeight(true);
+									jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a").each(function (i) {
+										if (jQuery(this).is(":visible")) {
+											if (maxImageNum < j) {
+												jQuery(this).hide();
+											}
+											j = j + 1;
+										}
+									});
+								}
+
+								function FrontProducts_detail02_initScroll() {
+									var nextNOImg = "/images/products/next-no-vertical.gif";
+									var nextCurrentImg = "/images/products/next-current-vertical.gif";
+									var preNOImg = "/images/products/pre-no-vertical.gif";
+									var preCurrentImg = "/images/products/pre-current-vertical.gif";
+									if (jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:first").is(":visible")) {
+										jQuery("#FrontProducts_detail02-1444121569129_clickimgL").attr("src", preNOImg);
+									} else {
+										jQuery("#FrontProducts_detail02-1444121569129_clickimgL").attr("src", preCurrentImg);
+									}
+									if (jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:last").is(":visible")) {
+										jQuery("#FrontProducts_detail02-1444121569129_clickimgR").attr("src", nextNOImg);
+									} else {
+										jQuery("#FrontProducts_detail02-1444121569129_clickimgR").attr("src", nextCurrentImg);
+									}
+									jQuery("#FrontProducts_detail02-1444121569129_clickimgR").parent().show();
+									jQuery("#FrontProducts_detail02-1444121569129_clickimgL").parent().show();
+								}
+
+								function FrontProducts_detail02_scroll(divId, px) {
+									if (px > 0 && jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:first").is(":hidden")) {
+										var a = jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:visible:first").prevAll("a:first");
+										var b = jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:visible:last");
+										jQuery(a).show("normal", FrontProducts_detail02_initScroll);
+										jQuery(b).hide();
+									} else if (px < 0 && jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:last").is(":hidden")) {
+										var a = jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:visible:last").nextAll("a:first");
+										var b = jQuery("#FrontProducts_detail02-1444121569129_key10imglist > a:visible:first");
+										jQuery(a).show();
+										jQuery(b).hide("normal", FrontProducts_detail02_initScroll);
+									}
+									FrontProducts_detail02_recalculated();
+								}
+
+								function changeBigImg(thisobj) {
+									var imgUrl = jQuery(thisobj).attr("src");
+									var bigImgUrlObj = jQuery("#FrontProducts_detail02-1444121569129_bigImgUrl");
+									jQuery("#FrontProducts_detail02-1444121569129_bigImg").attr("src", imgUrl);
+									jQuery("#FrontProducts_detail02-1444121569129_bigImg").attr("jqimg", imgUrl);
+									if (bigImgUrlObj.length > 0) {
+										if (bigImgUrlObj.hasClass("bigforImg")) {
+											bigImgUrlObj.attr("href", imgUrl);
+										}
+									}
+								}
+							</script>
+								<div class="content">
+									<div class="pic-module">
+										<div class="pic">
+											<?php 
+												foreach ($goods_info['dir'] as $dir){
+													echo 
+														'<div>
+															<img id="FrontProducts_detail02-1444121569129_bigImg" class="pic-img" src="'.$dir.'"
+																alt="'.$goods_info['FName'].'" 
+															/>
+														</div>';
+												}
+											?>
+											<div class="btnarea" style='display:none'>
+											</div>
+										</div>
+										<div class="skimpro">
+											<p class="next">
+												<span>下一页：</span>
+												<a href="#" target="_self" title="产品">产品</a>
+											</p>
+										</div>
+									</div>
+									<div class="pro-module">
+										<ul class="basic">
+											<li class="name1">
+												<span>产品名称：</span>
+												<?php echo $goods_info['FName'] ?></li>
+											<li class="code">
+												<span>产品编号：</span>
+												<?php echo $goods_info['FItemID'] ?></li>
+										</ul>
+										<ul class="choose">
+										</ul>
+										<p class="buttonP">
+										</p>
+									</div>
+								</div>
+								<div class="detail">
+									<ul id="FrontProducts_detail02-1444121569129_tabsFlag">
+										<li class="current">
+											产品详细介绍
+										</li>
+									</ul>
+									<div class="pic">
+										<?php 
+											foreach ($goods_info['dir'] as $dir){
+												echo 
+												'<a href="javascript:">
+													<div id="FrontProducts_detail02-1444121569129_isjqzoom">
+														<img id="FrontProducts_detail02-1444121569129_bigImg" class="pic-img" src="'.$dir.'"
+															alt="'.$goods_info['FName'].'" jqimg="/imageRepository/36ba463c-4b01-4b71-b6d6-2ac02a532769.jpg" 
+														/>
+													</div>
+												</a>';
+											}
+										?>
+										<div class="btnarea" style='display:none'>
+										</div>
+									</div>
+							</div>
+								<div class="other">
+								</div>
+							<script type="text/javascript">
+								//<![CDATA[
+								FrontProducts_detail02['FrontProducts_detail02-1444121569129_init'] = function () {
+									var showimage = jQuery("#FrontProducts_detail02-1444121569129 #small_image");
+									if (showimage.length > 0 && showimage.attr("src") == "") {
+										showimage.attr("src", "/images/common/noimage.jpg");
+									}
+									FrontProducts_detail02.init_addHitnumber('/FrontProducts.do?method=addHitnumber', '13',
+										'FrontProducts_detail02-1444121569129_showhitnumber');
+									if (jQuery("#FrontProducts_detail02-1444121569129_isjqzoom").hasClass("jqzoom")) {
+										jQuery(".jqzoom").jqueryzoom({
+											xzoom: 300,
+											yzoom: 300,
+											offset: 10,
+											position: "right",
+											preload: 1,
+											lens: 1
+										});
+									}
+									FrontProducts_detail02.defaultTab("FrontProducts_detail02-1444121569129");
+									FrontProducts_detail02.changeTab("FrontProducts_detail02-1444121569129");
+									perpareChangeLink();
+									if (jQuery("#FrontProducts_detail02-1444121569129 #btnpanorama").length > 0) {
+										FrontProducts.createModalDialog("panoramaModalDialog", 765, 640, i18n_FrontProducts_detail02_panorama);
+										jQuery("#btnpanorama").click(function () {
+											var url = jQuery("#FrontProducts_detail02-1444121569129_panoramaUrl").val()
+											FrontProducts.openModalDialog("panoramaModalDialog", url);
+										});
+									}
+								}
+
+								function perpareChangeLink() {}
+								jQuery(document).ready(FrontProducts_detail02['FrontProducts_detail02-1444121569129_init']);
+
+								function checkLessAmt(comId) {
+									String.prototype.trim = function () {
+										return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+									}
+									var buyAmt = $("#" + comId).find("#amount").val();
+									var needAmt = "";
+									var _flag = $("#" + comId).find(".lessnum").html() == null ? false : true;
+									if (_flag) {
+										needAmt = $("#" + comId).find(".lessnum").html().trim().split('>')[2].trim().split('\<')[0].trim();
+									}
+									if (null != needAmt && typeof (needAmt) != "undefined" && "" != needAmt) {
+										if (parseInt(buyAmt) < parseInt(needAmt)) {
+											alert("购买数量不能低于最低购买量");
+											return false;
+										} else {
+											return true;
+										}
+									} else {
+										return true;
+									}
+								};
+								//]]>
+							</script>
+						</div>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+	</DIV>
+	<SCRIPT>
+		$(document).ready(function () {
+			//var a_title=$(".FrontComContent_detail01-d1_c1 .title h3 ").html();
+			//$(".ny_ttr_con p").html(a_title);
+		});
+	</SCRIPT>
+	<SCRIPT type="text/javascript">
+		$(document).ready(function () {
+			$(".am_c4_c_cc li.content .pic-module a").each(function () {
+				$(this).append(" <div class='pic_a_bg'></div>");
+			});
+
+			$(".am_c4_c_cc li .pro-module li.code a").each(function () {
+				$(this).append(" <div class='pro_a_more'></div>");
+			});
+
+			$(".am_c6_c_cc li.content").each(function () {
+				$(this).append(" <div class='news_a_more'></div>");
+			});
+
+
+		});
+	</SCRIPT>
+
+	<script>
+		//元素高度根据屏幕高度适应
+		$(document).ready(function () {
+			function resizew() {
+				winHeight = document.documentElement.clientHeight;
+				winWidth = document.documentElement.clientWidth;
+
+
+				ppd_width = $(".FrontProducts_detail02-d7_c1 .pic-module .pic").width();
+				$(".FrontProducts_detail02-d7_c1 .pic-module .pic").height(ppd_width * 0.6);
+
+			};
+
+			resizew();
+			$(window).resize(function () {
+				resizew();
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			setTimeout(
+				function () {
+					$(".ny_ttl , .ny_ttr , .neiye_content").addClass("load_finish");
+				}, 500);
+		});
+	</script>
+
+	<script language='javascript' src='styles/visittrack.js' type='text/javascript'></script>
+	<script type='text/javascript'>
+		var visittrack_siteId = 'ZTS_ZT_ZH_CN_2015070300234';
+		VisitTrack.visittrack_log(visittrack_siteId, visittrack_url);
+	</script>
+</body>
+
+</HTML>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*************************************
+* 文件名称：layout.css
+* 作   者：界面设计制作部
+* 创建日期：2009-4-1
+* 最后修改：name/ 第X行 / yyyy-mm-dd
+* 文件版本：UI CSS Frameworks Beta
+* 内容概要:一列版式样式
+*************************************/
+/*根容器*/  
+#box_root{
+	margin-right: auto;
+	margin-left: auto;
+}
+/*主栏*/  
+#box_main{
+	margin-right: auto;
+	margin-left: auto;
+}
+/*一列栏目*/  
+#box_left {
+	width: 100%;
+}
+/*一列栏目的间距设置*/  
+#box_left .columnSpace { }
+
+
+
+ 
